@@ -79,16 +79,17 @@ else:
         try:
             result_1 = BMI_Calculator(weight,height)
             st.text(result_1)
+            if result_1 <18.50:
+                st.text("Your BMI is considered underweight, so please eat something!!!")
+            elif result_1 <24.9:
+                st.text("Your BMI is considered normal!!")
+            elif result_1 <29.9:
+                st.text("Your BMI is considered overweight!!")
+            else:
+                st.text("Your BMI is considered obese!!")
         except:
             st.text("Get a life!!")
         
-        if result_1 <18.50:
-            st.text("Your BMI is considered underweight, so please eat something!!!")
-        elif result_1 <24.9:
-            st.text("Your BMI is considered normal!!")
-        elif result_1 <29.9:
-            st.text("Your BMI is considered overweight!!")
-        else:
-            st.text("Your BMI is considered obese!!")
+
                 
 
